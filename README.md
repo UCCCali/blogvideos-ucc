@@ -1,2 +1,2 @@
 # blogvideos-ucc
-Demo HTML5, CSS3 y JS para la asignatura de Seminario Regional 2 en la UCC
+Proyecto de referencia para la materia de seminario regional 2 en la UCC, donde enseño lo básico de la programación web. HTML5, CSS3 y JS

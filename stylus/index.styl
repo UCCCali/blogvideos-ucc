@@ -1,162 +1,329 @@
 colorHeader = #3438E7
-colorFooter = #3438E7
-colorTitulos = #FFFFFF
+colorTitulo = #FFFFFF
 colorAzulAguaMarina = #14BABC
-colorNaranja = #EC6409
+colorAzulAguaMarinaOscuro = #1F9D9F
+colorNaranja = #FE642E
+colorNaranjaOscuro = #FF4000
 
 @font-face {
-  font-family: 'estrella';
-  src:  url('../fonts/icomoon.eot?s5xru1');
-  src:  url('../fonts/icomoon.eot?s5xru1#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?s5xru1') format('truetype'),
-    url('../fonts/icomoon.woff?s5xru1') format('woff'),
-    url('../fonts/icomoon.svg?s5xru1#icomoon') format('svg');
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   	
+	font-family: Flaticon;
+    font-size: 20px;
+	font-style: normal;
+	margin-left: 20px;
+}
+
+@font-face {
+  font-family: 'icono_estrellita_vacia';
+  src:  url('../fonts/icomoon.eot?n253df');
+  src:  url('../fonts/icomoon.eot?n253df#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?n253df') format('truetype'),
+    url('../fonts/icomoon.woff?n253df') format('woff'),
+    url('../fonts/icomoon.svg?n253df#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icono_estrellita_llena';
+  src:  url('../fonts/estrellallena.eot?az4rfq');
+  src:  url('../fonts/estrellallena.eot?az4rfq#iefix') format('embedded-opentype'),
+    url('../fonts/estrellallena.ttf?az4rfq') format('truetype'),
+    url('../fonts/estrellallena.woff?az4rfq') format('woff'),
+    url('../fonts/estrellallena.svg?az4rfq#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container-fluid
+	border 1px solid red
+	
+.columna
+	border 1px solid blue
+		
+.botonPpal
+	
+	background colorNaranja
+	font-family 'Montserrat', sans-serif
+	border none
+	border-radius 8%
+	color white		
+	font-weight bold		
+	padding 10px
+	text-decoration none
+	transition .5s
+			
+	&:hover
+		background colorNaranjaOscuro
+		color white
+		font-size 17px
+		text-decoration none
+
+body
+	font-family: 'Allerta', sans-serif;
+	
 .headerppal
 	background colorHeader
 	overflow hidden
+	box-shadow 0 8px 10px rgba(0,0,0,0.5)
+	padding-bottom 30px
 	
-	.header-titulo
-		color colorTitulos
-		font-size 45px
-		font-weight bold
-		margin-bottom 0px
+	.titulo
+		color colorTitulo
+		font-size 40px
+		font-family 'Montserrat', sans-serif
+		margin-top 30px
+		margin-bottom 0
 		
-	.header-titulo-a
-		color colorTitulos
+	.titulo-a		
+		color colorTitulo
 		font-size 20px
-		margin-top 0px
-		
-	.header-registrarse
-		background colorNaranja
-		color white
-		text-decoration none
-		padding 0.6em
-		font-weight bold
+		padding-top 5px		
+		padding-bottom 15px
 	
-	.header-logotipo		
+	.header-logotipo
 		float left
-		margin-right 100px
-				
+		margin-right 5em
+		margin-left 50px
+		margin-top 20px		
+		
 		img	
 			border-right-style solid
-			border-right-color white
-			border-radius 60%			
-			height 120px
+			border-width 2px
+			border-color white
+			border-radius 60%
+			height 140px
 			padding 20px
-			width 120px
+			width 140px
+			transition .6s
+			
+			&:hover
+				transform scale(1.2)
 		
 	.header-avatar
-		float right	
-		margin-top -100px	
+		float right
+		margin-top -200px
+		margin-right 50px
 		
 		img
+			border-radius 60%
 			height 80px
 			width 80px
-			border-radius 60%			
-							
+			transition .6s
+			transform translateY(100px)
+										
 .menu
 	background colorAzulAguaMarina
-	border-left-color white
-	border-left-width 15px
-	border-left-style solid
-	box-shadow 0px 13px 21px -6px rgba(0,0,0,0.75)
-		
+	border-left 10px solid white
+	box-shadow 0 8px 10px rgba(0,0,0,0.5)
+	
 	ul
-		height 45px
-		margin 0
-				
+		height 40px
+		margin 0px
+		
 		li 
-			display inline-block			
-			line-height 45px
-			padding 0 0.8em
+			display inline-block
+			line-height 40px
+			transition .6s
+			
+			&:hover
+				background colorAzulAguaMarinaOscuro	
 			
 			a 
-				color colorTitulos
+				color colorTitulo
 				text-decoration none
+				padding 0 1em
+				transition .6s
 				
+				&:hover
+					font-size 17px	
 
 .footer
 	
-	background colorFooter
+	height 270px
+	background colorHeader
+	margin 0px
 	
-	.realizadopor		
-		padding-top 30px
+	.contenedor-footer
+		display flex
+		justify-content space-around
 		
-	.realizadoclase		
-		padding-bottom 30px
-		
-	p		
-		color white
-		text-align center
-
+		.formulario-contactenos
+			display flex
+			
+			.form-col1
+			.form-col2
+				color white
+				display flex
+				flex-direction column
+				margin-top 15px
+				
+				label
+					margin-bottom 10px
+					
+				input
+					margin-bottom 10px
+				
+			.form-col1							
+				margin-right 30px				
+												
+				.tipos-comentarios
+					label
+						font-size 13px
+						
+			.form-col2
+				align-items flex-start
+				
+				textarea
+					margin-bottom 10px
+						
+		.redesSociales
+			
+			margin-top 40px
+			padding-right 3em
+			border-right 3px solid white
+			
+			.realizadopor		
+				padding-top 30px
+				
+			.realizadoclase		
+				padding-bottom 30px
+				
+			p		
+				color colorTitulo
+				text-align center
+				margin 10px
+				
+			.logos-redes
+				
+				text-align center
+				
+				a
+					text-decoration none									
+				
+				.logo-facebook		
+					
+					&:before
+							
+						color colorNaranja					
+						content: "\f101"
+						font-size 30px
+						font-family "Flaticon"
+						
+				.logo-twitter
+					
+					&:before				
+						color colorNaranja					
+						content: "\f102"
+						font-size 30px
+						font-family "Flaticon"							
+						
+				.logo-github
+					
+					&:before				
+						color colorNaranja					
+						content: "\f100"
+						font-size 30px
+						font-family "Flaticon"
+					
 .posts
-	
-	display flex
-	display-direction row
-	padding 1em
-	margin 0
-	margin-top 1em	
+		
+	padding 2em
+	margin 0px
 	
 	.post
-		width 50%
-		box-shadow 12px 13px 33px -6px rgba(0,0,0,0.75)
-		border 1px solid black
-		margin 1em
 		
-		.post-titulo
-			background #D2C6C6
-			
-			h2
-				text-align center
-				font-weight bold
-				padding 0.3em 0
-				margin 0
-				
+		background #E6E6E6
+		border 1px solid black
+		box-shadow 10px 9px 25px -1px rgba(0,0,0,0.75)
+		display inline-block
+		margin-bottom 1.5em
+		margin-right 1.5em	
+		width 48%
+		
 		.post-calificacion
 			text-align center
-			margin 0.5em 0
+			padding 0.5em
 						
-			.post-calif-estrella-llena
+			.post-estrellita-vacia
+				
 				text-decoration none
 				
 				&:before
 					color colorNaranja
-					content "\e9d9"
-					font-family "estrella"
+					content: "\e9d7"
+					font-family "icono_estrellita_vacia"
 					
-			.post-calif-estrella-vacia
+			.post-estrellita-llena
+				
 				text-decoration none
 				
 				&:before
 					color colorNaranja
-					content "\e9d7"
-					font-family "estrella"
-								
+					content: "\e9d9"
+					font-family "icono_estrellita_llena"
+		
+		.post-titulo
+			text-align center
+			background #D8D8D8
+			font-family 'Montserrat', sans-serif
+			padding 0.5em
+			
 		.post-video
 			text-align center
 			padding 0 0.5em
 			
 		.post-descripcion
-			padding 0 0.5em
+			text-align center			
+			background #D8D8D8
+			font-family: 'Allerta', sans-serif;
+			padding 0.5em
+			font-size 17px
 			
-		.post-autor
+		.post-footer
 			background colorAzulAguaMarina
 			
-			p
+			.post-footer-autor
 				text-align right
+				font-size 17px
 				font-weight bold
-				color white
-				padding 0.5em
-				margin 0
-				
-			
+				padding-bottom 1em
+				padding-right 2em
+				padding-top 1em
 			
 
+
+@media screen and (max-width: 768px)
+
+	.posts		
+		.post
+			display block
+			background red
 			
-			
+	nav		
+		display none		
+
+	
 		
+
+			
+
 	
